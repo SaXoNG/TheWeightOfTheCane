@@ -34,8 +34,9 @@ function App() {
             onChange={(e) => setB(e.target.value)}
           />
         </div>
-        <button className="button"></button>
       </form>
+      <button className="button">Рахувати</button>
+
       <div className="result">{result}</div>
     </div>
   );
