@@ -1,7 +1,9 @@
 import { useState } from "react";
 
 const counter = (a: number, b: number): string => {
-  return (a / (a + b)).toFixed(2);
+  const result = a / (a + b);
+
+  return result.toFixed(2);
 };
 
 function App() {
@@ -15,14 +17,26 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>Counter</h1>
       <form onSubmit={handleSubmit}>
-        <input type="text" value={a} onChange={(e) => setA(e.target.value)} />
-        <input type="text" value={b} onChange={(e) => setB(e.target.value)} />
+        <div className="inputs">
+          <input
+            className="input"
+            type="text"
+            value={a}
+            onChange={(e) => setA(e.target.value)}
+          />
+          <input
+            className="input"
+            type="text"
+            value={b}
+            onChange={(e) => setB(e.target.value)}
+          />
+        </div>
         <button className="button"></button>
       </form>
-      <div>{result}</div>
+      <div className="result">{result}</div>
     </div>
   );
 }
