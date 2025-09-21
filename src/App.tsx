@@ -35,7 +35,9 @@ function App() {
           />
         </div>
       </form>
-      <button className="button">Рахувати</button>
+      <button className="button" onClick={handleSubmit}>
+        Рахувати
+      </button>
 
       <div className="result">{result}</div>
     </div>
